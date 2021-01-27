@@ -5,7 +5,7 @@
         <div class="col-12">
             <div class="card card-chart">
                 <div class="card-header ">
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-sm-6 text-left">
                             <h5 class="card-category">Total Shipments</h5>
                             <h2 class="card-title">Performance</h2>
@@ -35,17 +35,17 @@
                             </label>
                             </div>
                         </div>
-                    </div>
+                    </di -->
                 </div>
-                <div class="card-body">
+               <!--  <div class="card-body">
                     <div class="chart-area">
                         <canvas id="chartBig1"></canvas>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-lg-4">
             <div class="card card-chart">
                 <div class="card-header">
@@ -85,9 +85,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="row">
-        <div class="col-lg-6 col-md-12">
+       <!--  <div class="col-lg-6 col-md-12">
             <div class="card card-tasks">
                 <div class="card-header ">
                     <h6 class="title d-inline">Tasks(5)</h6>
@@ -238,11 +238,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="col-lg-6 col-md-12">
             <div class="card ">
                 <div class="card-header">
-                    <h4 class="card-title">Simple Table</h4>
+                    <h4 class="card-title">Vendors</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-   protected $redirectTo = RouteServiceProvider::HOME;
+   // protected $redirectTo = RouteServiceProvider::HOME;
 
 
 
@@ -52,15 +52,31 @@ class LoginController extends Controller
         ]);
    
         if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
-        {
-            if (auth()->user()->is_admin == 1) {
-                return redirect()->route('admin.home');
-            }else{
-                return redirect()->route('home');
-            }
-        }else{
-            return redirect()->route('login')
+        {    
+            if (isset($input['is_admin']) && $input['is_admin'] == 1) {
+
+               if (isset(auth()->user()->is_admin) && auth()->user()->is_admin == 1) {
+
+                return redirect()->route('admindash');
+                }else{
+
+               return redirect()->route('admin')
                 ->with('error','Email-Address And Password Are Wrong.');
+                
+                }
+            }else{
+                return redirect()->route('vendordash');
+            }
+           }else{
+
+             if ($input['is_admin'] == 1) {
+                  return redirect()->route('admin')
+                ->with('error','Email-Address And Password Are Wrong.');
+             }else{
+                return redirect()->route('vendor')
+                ->with('error','Email-Address And Password Are Wrong.');
+             }
+            
         }
           
     }

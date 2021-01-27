@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +21,15 @@ Route::get('/', function () {
 
 // Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/admin', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->middleware('auth');
-Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/admin', [LoginController::class, 'showLoginForm'])->name('admin');
+Route::get('/vendor', [LoginController::class, 'showVendorLoginForm'])->name('vendor');
+Route::get('/vendordash', [HomeController::class, 'index'])->name('vendordash');
+Route::get('/admindash', [HomeController::class, 'adminHome'])->name('admindash');
 
 Auth::routes();
 
-Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
+// Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
 		Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);
