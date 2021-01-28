@@ -14522,6 +14522,7 @@ table.tablesorter thead tr .headerSortDown {
 }
 
 .fixed-plugin {
+  display: none;
   position: fixed;
   right: 0;
   width: 64px;
@@ -17269,6 +17270,9 @@ Copyright (c) 2015 Daniel Eden
 .card .card-body {
   padding: 15px;
 }
+.card-login.card .card-body {
+  padding: 0 15px;
+}
 
 .card .card-body.table-full-width {
   padding-left: 0;
@@ -17501,6 +17505,9 @@ Copyright (c) 2015 Daniel Eden
   background-color: transparent;
   border: 0;
   padding: 15px;
+}
+.card-login.card .card-footer {
+  padding: 0 15px;
 }
 
 .card .card-footer .stats i {
@@ -17769,6 +17776,24 @@ Copyright (c) 2015 Daniel Eden
   padding-bottom: 150px;
   padding-top: 150px;
 }
+.login-page .content{
+  padding-bottom: 0;
+  padding-top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register-page .content{
+  padding-bottom: 0;
+  padding-top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .full-page .footer {
   position: absolute;
@@ -17785,6 +17810,10 @@ Copyright (c) 2015 Daniel Eden
 
 .login-page .card-login.card-white .card-header .card-title {
   color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 41px;
+    margin: 15px 0;
 }
 
 .login-page .card-login .card-header .card-title {
@@ -17798,29 +17827,36 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .login-page .card-login .card-header {
-  padding: 0 0 100px;
+  padding: 40px 0 70px;
   overflow: hidden;
 }
 
 .login-page .card-login .card-header img {
   position: absolute;
+  top: 0;
 }
 
 .login-page .card-login .input-group:last-child {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .login-page .link {
-  font-size: 10px;
+  font-size: 12px;
   text-decoration: none;
 }
-
+.card-register{
+  margin-top:30px;
+  margin-bottom:0;
+}
 .card-register .card-header {
+  position: relative;
   padding: 0 0 65px;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 1;
 }
-
+.auto-mrg{
+  margin:auto !important;
+}
 .card-register .form-check {
   margin-top: 20px;
   margin-left: 20px;
@@ -17833,6 +17869,10 @@ Copyright (c) 2015 Daniel Eden
 
 .card-register.card-white .card-header .card-title {
   color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 41px;
+  margin: 15px 0;
 }
 
 .card-register .card-header .card-title {
@@ -17848,8 +17888,8 @@ Copyright (c) 2015 Daniel Eden
 .card-register .card-img {
   position: absolute;
   left: 0;
-  top: -15%;
-  width: 70%;
+  top: 0;
+  width: 92%;
 }
 
 .full-page.register-page .info-horizontal {
@@ -17894,5 +17934,17 @@ Copyright (c) 2015 Daniel Eden
 .sidebar .sidebar-wrapper>.nav [data-toggle="collapse"]~div>ul>li>a i, .sidebar .sidebar-wrapper .user .info [data-toggle="collapse"]~div>ul>li>a i, .off-canvas-sidebar .sidebar-wrapper>.nav [data-toggle="collapse"]~div>ul>li>a i, .off-canvas-sidebar .sidebar-wrapper .user .info [data-toggle="collapse"]~div>ul>li>a i {
   line-height: 32px;
 }
-
+@media (max-width:768px){
+.card-register .card-header {
+  padding: 0 0 114px;
+}
+}
+@media (max-width:567px){
+  .card-register .card-img {
+    width: 100%;
+}
+.card-register .card-header {
+  padding: 0px 0 30px;
+}
+}
 /*# sourceMappingURL=dashboard-free.css.map */

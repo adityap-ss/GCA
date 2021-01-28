@@ -3,10 +3,10 @@
 @section('content')
     <div class="row">
        
-        <div class="col-md-7 mr-auto">
+        <div class="col-lg-6 col-md-12 col-sm-12 auto-mrg">
             <div class="card card-register card-white">
                 <div class="card-header">
-                    <img class="card-img" src="{{ asset('black') }}/img/card-primary.png" alt="Card image">
+                    <img class="card-img" src="{{ asset('black') }}/img/card-primary-1.png" alt="Card image">
                     <h4 class="card-title">{{ __('Register') }}</h4>
                 </div>
                 <form class="form" method="post" action="{{ route('register') }}">
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-round btn-lg">{{ __('Register') }}</button>
+                        <button type="submit" class="btn btn-primary btn-round btn-lg">{{ __('Registerr') }}</button>
                     </div>
                 </form>
             </div>
