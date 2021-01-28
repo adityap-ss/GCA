@@ -34,10 +34,12 @@
                     </div>
                 </div>
                 <div class="card-footer">
-
-                    <input type="hidden"  name="is_admin" value="1">
                     <button type="submit" href="" class="btn btn-primary btn-lg btn-block mb-3">{{ __('Login') }}</button>
-                   
+                    <div class="pull-left">
+                        <h6>
+                            <a href="{{ route('register') }}" class="link footer-link">{{ __('Create Account') }}</a>
+                        </h6>
+                    </div>
                     <div class="pull-right">
                         <h6>
                             <a href="{{ route('password.request') }}" class="link footer-link">{{ __('Forgot password?') }}</a>
